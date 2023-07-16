@@ -5,7 +5,6 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { Food } from "./components/Food";
-import { Payment } from "./components/Payment";
 import { Welcome } from "./components/signup/welcome";
 import { LooseWeight } from "./components/signup/weightgoal";
 import { BaselineActivity } from "./components/signup/activitylevelpage";
@@ -18,7 +17,6 @@ import { CreateAccount } from "./components/signup/createaccountpg";
 import { Login } from "./components/signup/loginpg";
 import { CreateUsername } from "./components/signup/createusernamepg";
 
-import { Premium } from "./components/premium/Premium";
 
 function App() {
   return (
@@ -31,8 +29,6 @@ function App() {
 
         <Route path="/goals" element={<Goals />}></Route>
         <Route path="/apps" element={<AllApps />}></Route>
-        <Route path="/payment" element={<Payment />}></Route>
-        {/* <Route path="/premium" element={<Premium />}></Route> */}
         <Route path="/login" element={<Login />}></Route>
 
         {/* Signup Page 1 */}

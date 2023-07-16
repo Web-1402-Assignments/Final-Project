@@ -6,17 +6,17 @@ const verifyToken = (token) => {
 };
 
 module.exports = (req, res, next) => {
-	// if we received the bearer token in header
-	const bearerToken = req?.header?.authorization; // Frontend
+	
+	const bearerToken = req?.header?.authorization; 
 
-	// if not recieved or token is not bearer token then we will throw an error
+	
 	if (!bearerToken || !bearerToken.startsWith("Bearer ")) {
 		return res
 			.status(400)
 			.json({ status: "failed", message: "Please Provide valid token" });
 	}
 
-	// else we will try to get the user from token
+	
 	const token = bearerToken.split(" ")[1];
 
 	let user;
@@ -29,16 +29,15 @@ module.exports = (req, res, next) => {
 		});
 	}
 
-	// if no user found then we will throw an error
+	
 	if (!user) {
 		return res
 			.status(400)
 			.json({ status: "failed", message: "Please Provide valid token" });
 	}
 
-	// else we will attach the user to the req
 	req.user = user;
 
-	// return next
+	
 	return next();
 };

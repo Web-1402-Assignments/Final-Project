@@ -28,7 +28,7 @@ export const Footer = () =>  {
             </a>
           </li>
           <li className="social-icon__item">
-            <a className="social-icon__link" href="https://github.com/Web-1402-Assignments/Fitness_Tracker">
+            <a className="social-icon__link" href="https://github.com/Web-1402-Assignments/Final-Project">
               <FaGithub></FaGithub>
             </a>
           </li>

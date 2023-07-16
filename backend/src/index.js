@@ -26,8 +26,6 @@ app.post("/login", login);
 app.use("/foods", foodController);
 app.use("/users", userController);
 
-// ---------------------- Google OAuth --------------------------
-// app.use(passport.authenticate());
 
 app.get(
 	"/auth/google",
